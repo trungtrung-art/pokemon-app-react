@@ -25,8 +25,7 @@ function Detail() {
     }, []);
 
     return (
-        <div className="App-container">
-            <Header type={type} id={id} />
+        <div className="App-container p-0">
             {loading && <Loading />}
             {!loading && (
                 <>

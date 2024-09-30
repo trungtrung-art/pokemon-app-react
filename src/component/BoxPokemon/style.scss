@@ -1,100 +1,141 @@
 .App-container {
-    padding-top: 85px;
+    padding-top: 60px;
     height: 100vh;
 }
 
 .item {
     &__box {
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
         cursor: pointer;
-        border-radius: 10px;
-        box-shadow: 0 3px 15px rgb(100 100 100 / 50%);
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 6px 6px 4px #c9c7c7;
         margin: 10px;
         padding: 20px;
-        text-align: center;
+
+        min-width: 170px;
+        min-height: 289px;
+        border: 5px solid gray;
         &--fire {
-            background-color: #fddfdf;
+            background: linear-gradient(#f0803099, rgb(255, 255, 255));
+            border-color: #f08030;
         }
         &--grass {
-            background-color: #defde0;
+            background: linear-gradient(#78c85099, rgb(255, 255, 255));
+            border-color: #78c850;
         }
         &--electric {
-            background-color: #fcf7de;
+            background: linear-gradient(#f8d03099, rgb(255, 255, 255));
+            border-color: #f8d030;
         }
         &--water {
-            background-color: #def3fd;
+            background: linear-gradient(#6890f099, rgb(255, 255, 255));
+            border-color: #6890f0;
         }
         &--ground {
-            background-color: #f4e7da;
+            background: linear-gradient(#e0c06899, rgb(255, 255, 255));
+            border-color: #e0c068;
         }
         &--rock {
-            background-color: #d5d5d4;
+            background: linear-gradient(#b8a03899, rgb(255, 255, 255));
+            border-color: #b8a038;
         }
         &--fairy {
-            background-color: #fceaff;
+            background: linear-gradient(#ee99ac99, rgb(255, 255, 255));
+            border-color: #ee99ac;
         }
         &--poison {
-            background-color: #98d7a5;
+            background: linear-gradient(#a040a099, rgb(255, 255, 255));
+            border-color: #a040a0;
         }
         &--bug {
-            background-color: #f8d5a3;
+            background: linear-gradient(#a8b82099, rgb(255, 255, 255));
+            border-color: #a8b820;
         }
         &--dragon {
-            background-color: #97b3e6;
+            background: linear-gradient(#7038f899, rgb(255, 255, 255));
+            border-color: #7038f8;
         }
         &--psychic {
-            background-color: #eaeda1;
+            background: linear-gradient(#f8588899, rgb(255, 255, 255));
+            border-color: #f85888;
         }
         &--flying {
-            background-color: #f5f5f5;
+            background: linear-gradient(#4a677d99, rgb(255, 255, 255));
+            border-color: #4a677d;
         }
         &--fighting {
-            background-color: #e6e0d4;
+            background: linear-gradient(#99402599, rgb(255, 255, 255));
+            border-color: #994025;
         }
         &--normal {
-            background-color: #f5f5f5;
+            background: linear-gradient(#a8a87899, rgb(255, 255, 255));
+            border-color: #a8a878;
         }
         &--dark {
-            background-color: #616163;
+            background: linear-gradient(#5a597999, rgb(255, 255, 255));
+            border-color: #5a5979;
         }
         &--ghost {
-            background-color: #8a2be2;
+            background: linear-gradient(#70589899, rgb(255, 255, 255));
+            border-color: #705898;
         }
         &--ice {
-            background-color: #78c2f7;
+            background: linear-gradient(#86d1f399, rgb(255, 255, 255));
+            border-color: #86d1f3;
+        }
+        &--steel {
+            background: linear-gradient(#42bd9499, rgb(255, 255, 255));
+            border-color: #42bd94;
         }
     }
 }
 
 .img {
     &__block {
-        background-color: rgba(255, 255, 255, 0.6);
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        text-align: center;
-        img {
-            margin-top: 20px;
-            max-height: 90%;
-            max-width: 100%;
+        &--pokemon {
+            width: 180px;
+            height: 180px;
+            z-index: 10;
         }
+        &--ball {
+            position: absolute;
+            height: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.04;
+        }
+        display: flex;
+        width: 100%;
+        height: 210px;
+        justify-content: center;
+        align-items: flex-end;
     }
 }
 
 .info {
-    &__block {
-        margin-top: 20px;
-    }
     &__number {
-        background-color: rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        font-size: 0.8em;
-        padding: 5px 10px;
+        font-size: 56px;
+        color: rgba(0, 0, 0, 0.3);
+        letter-spacing: 0.1em;
+        position: absolute;
+        top: 0;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        left: 50%;
+        transform: translateX(-50%);
     }
     &__name {
-        margin: 15px 0 7px;
-        font-family: "AlleynW01-Medium", sans-serif;
-        font-size: 16px;
-        max-width: 120px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 24px;
+        margin-top: -10px;
+        display: block;
+        text-align: center;
     }
 }
 
@@ -121,67 +162,65 @@
         justify-content: center;
     }
     &__type {
-        padding: 3px 10px;
-        border-radius: 25px;
-        font-size: 12px;
-        margin-right: 5px;
+        padding: 4px;
         color: #fff;
-        &:last-child {
-            margin-right: 0;
-        }
+
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
         &--fire {
-            background-color: #fd4949;
+            color: #f08030;
         }
         &--grass {
-            background-color: #8de092;
+            color: #78c850;
         }
         &--electric {
-            background-color: #fbdf54;
+            color: #f8d030;
         }
         &--water {
-            background-color: #61c1ef;
+            color: #6890f0;
         }
         &--ground {
-            background-color: #ffad5c;
+            color: #e0c068;
         }
         &--rock {
-            background-color: #b5b5b5;
+            color: #b8a038;
         }
         &--fairy {
-            background-color: #f1b2fb;
+            color: #ee99ac;
         }
         &--poison {
-            background-color: #9370c1;
+            color: #a040a0;
         }
         &--bug {
-            background-color: #fbb858;
+            color: #a8b820;
         }
         &--dragon {
-            background-color: #5f7eb5;
+            color: #7038f8;
         }
         &--psychic {
-            background-color: #cbd04b;
+            color: #f85888;
         }
         &--flying {
-            background-color: #c1bfbf;
+            color: #4a677d;
         }
         &--fighting {
-            background-color: #bdb6a7;
+            color: #994025;
         }
         &--normal {
-            background-color: #c7c5c5;
-        }
-        &--ghost {
-            background-color: #bd85f1;
-        }
-        &--ice {
-            background-color: #6495ed;
+            color: #a8a878;
         }
         &--dark {
-            background-color: #000;
+            color: #5a5979;
+        }
+        &--ghost {
+            color: #705898;
+        }
+        &--ice {
+            color: #86d1f3;
         }
         &--steel {
-            background-color: #989997;
+            color: #42bd94;
         }
     }
 }

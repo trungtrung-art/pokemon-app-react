@@ -44,22 +44,7 @@ function TableDetailPokemon({ data }) {
         <table>
             <tr>
                 <td>
-                    <p className="text__title">ID</p>
-                </td>
-                <td>
-                    <p className="text__info">
-                        #
-                        {`00${id}`.toString().length > 4
-                            ? `00${id}`.toString().slice(2)
-                            : `00${id}`.toString().length > 3
-                            ? `00${id}`.toString().slice(1)
-                            : `00${id}`}
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p className="text__title">Height</p>
+                    <p className="text__title">Height:</p>
                 </td>
                 <td>
                     <p className="text__info">
@@ -69,7 +54,7 @@ function TableDetailPokemon({ data }) {
             </tr>
             <tr>
                 <td>
-                    <p className="text__title">Weight</p>
+                    <p className="text__title">Weight:</p>
                 </td>
                 <td>
                     <p className="text__info">
@@ -79,7 +64,7 @@ function TableDetailPokemon({ data }) {
             </tr>
             <tr>
                 <td>
-                    <p className="text__title">Abilities</p>
+                    <p className="text__title">Abilities:</p>
                 </td>
                 <td>
                     <div className="group group__info">{mapAbility(abilities)}</div>
@@ -87,7 +72,7 @@ function TableDetailPokemon({ data }) {
             </tr>
             <tr>
                 <td>
-                    <p className="text__title">Type</p>
+                    <p className="text__title">Type:</p>
                 </td>
                 <td>
                     <p className="text__info">
@@ -97,7 +82,7 @@ function TableDetailPokemon({ data }) {
             </tr>
             <tr>
                 <td>
-                    <p className="text__title">Form</p>
+                    <p className="text__title">Form:</p>
                 </td>
                 <td>
                     <p className="text__info">

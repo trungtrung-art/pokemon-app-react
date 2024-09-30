@@ -4,7 +4,7 @@ import "./style.scss";
 
 function ProgressBar({ color, value }) {
     return (
-        <Progress animated color={color} value={value}>
+        <Progress color={color} value={value}>
             {value}
         </Progress>
     );

@@ -1,55 +1,177 @@
 .detail {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 15px;
     margin-right: auto;
     margin-left: auto;
+    min-height: 100vh;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    &--fire {
+        background: linear-gradient(rgb(255, 255, 255), #f08030);
+    }
+    &--grass {
+        background: linear-gradient(rgb(255, 255, 255), #78c850);
+    }
+    &--electric {
+        background: linear-gradient(rgb(255, 255, 255), #f8d030);
+    }
+    &--water {
+        background: linear-gradient(rgb(255, 255, 255), #6890f0);
+    }
+    &--ground {
+        background: linear-gradient(rgb(255, 255, 255), #e0c068);
+    }
+    &--rock {
+        background: linear-gradient(rgb(255, 255, 255), #b8a038);
+    }
+    &--fairy {
+        background: linear-gradient(rgb(255, 255, 255), #ee99ac);
+    }
+    &--poison {
+        background: linear-gradient(rgb(255, 255, 255), #a040a0);
+    }
+    &--bug {
+        background: linear-gradient(rgb(255, 255, 255), #a8b820);
+    }
+    &--dragon {
+        background: linear-gradient(rgb(255, 255, 255), #7038f8);
+    }
+    &--psychic {
+        background: linear-gradient(rgb(255, 255, 255), #f85888);
+    }
+    &--flying {
+        background: linear-gradient(rgb(255, 255, 255), #4a677d);
+    }
+    &--fighting {
+        background: linear-gradient(rgb(255, 255, 255), #994025);
+    }
+    &--normal {
+        background: linear-gradient(rgb(255, 255, 255), #a8a878);
+    }
+    &--dark {
+        background: linear-gradient(rgb(255, 255, 255), #5a5979);
+    }
+    &--ghost {
+        background: linear-gradient(rgb(255, 255, 255), #705898);
+    }
+    &--ice {
+        background: linear-gradient(rgb(255, 255, 255), #86d1f3);
+    }
+    &--steel {
+        background: linear-gradient(rgb(255, 255, 255), #42bd94);
+    }
+
     &__name {
-        color: #6d6d6d;
-        font-family: "AlleynW01-Medium", sans-serif;
+        color: #505050;
+        font-size: 8rem;
+        font-weight: 700;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        text-align: right;
+        margin-bottom: 0;
+        text-shadow: 0 0.7rem white;
+        &--fire {
+            color: #f08030;
+        }
+        &--grass {
+            color: #78c850;
+        }
+        &--electric {
+            color: #f8d030;
+        }
+        &--water {
+            color: #6890f0;
+        }
+        &--ground {
+            color: #e0c068;
+        }
+        &--rock {
+            color: #b8a038;
+        }
+        &--fairy {
+            color: #ee99ac;
+        }
+        &--poison {
+            color: #a040a0;
+        }
+        &--bug {
+            color: #a8b820;
+        }
+        &--dragon {
+            color: #7038f8;
+        }
+        &--psychic {
+            color: #f85888;
+        }
+        &--flying {
+            color: #4a677d;
+        }
+        &--fighting {
+            color: #994025;
+        }
+        &--normal {
+            color: #a8a878;
+        }
+        &--dark {
+            color: #5a5979;
+        }
+        &--ghost {
+            color: #705898;
+        }
+        &--ice {
+            color: #86d1f3;
+        }
+        &--steel {
+            color: #42bd94;
+        }
+        .text {
+            &__info {
+                font-size: 10rem;
+                padding: 0;
+                margin-left: auto;
+                width: fit-content;
+            }
+        }
     }
     &__info {
-        display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        bottom: 20%;
+        display: flex;
+        &--mar img {
+            max-height: 50rem;
+            min-height: 45rem;
+        }
+        @media (max-width: 1200px) {
+            display: block;
+            position: relative;
+            margin-top: 21.6rem;
+            &--degR,
+            &--deg {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.button {
+    &__back {
+        margin-top: 5px;
+        color: #505050;
+        border-radius: 25px;
+        border: 2px solid #505050;
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        display: flex;
         justify-content: center;
         align-items: center;
-        &--mar {
-            margin: 0 3rem;
-        }
-        &--block {
-            &:hover {
-                transform: none;
-            }
-            img {
-                width: 400px;
-                height: auto;
-            }
-        }
-
-        &--bio {
-            perspective: 400px;
-        }
-
-        &--deg {
-            transition: 0.3s;
-            transform: rotateY(30deg);
-            &:hover {
-                transform: none;
-            }
-        }
-        &--degR {
-            transition: 0.3s;
-            transform: rotateY(-30deg);
-            &:hover {
-                transform: none;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            &--deg,
-            &--degR {
-                transform: none;
-            }
-        }
+        position: absolute;
+        z-index: 999;
     }
 }

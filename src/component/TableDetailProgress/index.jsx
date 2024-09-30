@@ -4,7 +4,7 @@ import ProgressBar from "../../component/form-control/ProgessBar/index.jsx";
 
 function TableDetailProgress({ data }) {
     const { types, stats } = data;
-    console.log(stats);
+
     return (
         <table>
             <tr>
