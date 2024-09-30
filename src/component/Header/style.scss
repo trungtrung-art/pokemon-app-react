@@ -12,6 +12,13 @@
         z-index: 999;
         background-color: #e83e34;
         min-height: 60px;
+        .link-github {
+            margin-left: auto;
+        }
+        .logo-github {
+            width: 40px;
+            height: 40px;
+        }
     }
     &__title {
         font-family: Montserrat, sans-serif;
